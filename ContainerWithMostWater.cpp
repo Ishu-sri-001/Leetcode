@@ -8,10 +8,10 @@ public:
         int l=h.size()-1;
         while(i<=l)
         {
-            int t=(l-i)*min(h[i],h[l]);
-            if(t>s)
-                s=t;
-            if(min(h[i],h[l])==h[i])
+            int m=min(h[i],h[l]);
+            int t=(l-i)*m;
+            s=max(s,t);
+            if(m==h[i])
                 i++;
             else 
                 l--;
