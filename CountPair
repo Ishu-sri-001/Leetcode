@@ -1,0 +1,21 @@
+// https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target/description/
+
+class Solution {
+public:
+    int countPairs(vector<int>& n, int t) {
+        int c=0;
+        for (int i=0;i<n.size();i++)
+        {
+            int j=i+1;
+            while(j<n.size())
+            {
+                if((n[i]+n[j])<t)
+                    c++;
+                // else if((n[i]+n[j])>t)
+                //     break;
+                j++;
+            }
+        }
+        return c;
+    }
+};
